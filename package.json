@@ -1,0 +1,12 @@
+{
+  "name": "storybook-react",
+  "version": "0.9.0",
+  "description": "storybook for react",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Accel-Hack/react-text-editor.git"
+  },
+  "author": "AccelHack",
+  "license": "MIT"
+}
