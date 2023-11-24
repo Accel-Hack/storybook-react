@@ -1,6 +1,12 @@
 import styles from './styles.module.css';
+import {ClassNameUtils} from "../../../common/utils/ClassNameUtils.ts";
+import {Component} from "../../../common/types/Component.ts";
 
-interface BalloonProps {
+interface BalloonProps extends Component {
+  /**
+   * The text shown in the component
+   */
+  label: string;
   /**
    * Optional click handler
    */
@@ -8,12 +14,14 @@ interface BalloonProps {
 }
 
 /**
- * Primary UI component for user interaction
+ * Primary UI component for tool tip
  */
-export const Balloon = ({...props}: BalloonProps) => {
+export const Balloon = ({label, className, ...props}: BalloonProps) => {
   return (
-    <span className={styles.balloon} {...props}>
-      削除
+    <span className={[styles.balloon, ...ClassNameUtils.convert(className)].join(' ')}
+          {...props}
+    >
+      {label}
     </span>
   );
 };
