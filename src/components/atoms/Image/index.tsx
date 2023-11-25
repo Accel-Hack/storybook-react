@@ -1,32 +1,26 @@
-import styles from './styles.module.css';
-import {ClassNameUtils} from "../../../common/utils/ClassNameUtils.ts";
-import {Component} from "../../../common/types/Component.ts";
+import styles from './styles.module.css'
+import { ClassNameUtils } from '../../../common/utils/ClassNameUtils.ts'
+import { Component } from '../../../common/types/Component.ts'
 
 interface ImageProps extends Component {
   /**
    * The path to the image
    */
-  source: string;
+  source: string
   /**
    * Width of the Image
    */
-  width?: number;
+  width?: number
   /**
    * Height of the Image
    */
-  height?: number;
+  height?: number
   /**
    * Optional click handler
    */
-  onClick?: () => void;
+  onClick?: () => void
 }
 
-export const Image = ({source, className, ...props}: ImageProps) => {
-  return (
-    <img src={source}
-         className={[styles.image, ...ClassNameUtils.convert(className)].join(' ')}
-         {...props}
-    >
-    </img>
-  );
-};
+export const Image = ({ source, className, ...props }: ImageProps) => {
+  return <img src={source} className={[styles.image, ...ClassNameUtils.convert(className)].join(' ')} {...props}></img>
+}

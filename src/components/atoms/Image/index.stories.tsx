@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react'
 
-import {Image} from './index.tsx';
+import { Image } from './index.tsx'
 
 import reactLogo from '../.././../assets/react.svg'
 
@@ -11,10 +11,10 @@ const meta = {
     layout: 'centered',
   },
   tags: ['autodocs'],
-} satisfies Meta<typeof Image>;
+} satisfies Meta<typeof Image>
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default meta
+type Story = StoryObj<typeof meta>
 
 export const Icon: Story = {
   args: {
@@ -22,18 +22,18 @@ export const Icon: Story = {
     width: 128,
     height: 128,
   },
-};
+}
 
 export const Portrait: Story = {
   args: {
     source: reactLogo,
     height: 400,
   },
-};
+}
 
 export const Landscape: Story = {
   args: {
     source: reactLogo,
     width: 400,
   },
-};
+}

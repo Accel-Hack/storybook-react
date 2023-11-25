@@ -1,4 +1,4 @@
-import {ClassName} from "./ClassName.ts";
+import { ClassName } from './ClassName.ts'
 
 export type Component = {
   /**
